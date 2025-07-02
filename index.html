@@ -128,6 +128,9 @@
         <div style="max-width: 800px; margin-bottom: 40px;">
           <canvas id="soChart"></canvas>
         </div>
+        <div style="max-width: 600px; margin-top: 40px;">
+          <canvas id="soRadarChart"></canvas>
+        </div>
         <div style="max-width: 800px;">
           <canvas id="piChart"></canvas>
         </div>
@@ -189,6 +192,67 @@
           }
         }
       });
+
+      const radarCtx = document.getElementById('soRadarChart').getContext('2d');
+      new Chart(radarCtx, {
+        type: 'radar',
+        data: {
+          labels: soLabels.slice(0, 8), // assuming SOs are up to h
+          datasets: [
+            {
+              label: 'Nilai SO',
+              data: soValues.slice(0, 8),
+              backgroundColor: 'rgba(21, 101, 192, 0.2)',
+              borderColor: '#1565c0',
+              pointBackgroundColor: '#1565c0',
+              fill: true
+            },
+            {
+              label: 'Standar (70)',
+              data: thresholdSO.slice(0, 8),
+              borderColor: 'rgba(255, 193, 7, 1)',
+              borderDash: [4, 4],
+              pointRadius: 0,
+              fill: false,
+              type: 'radar'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          elements: {
+            line: {
+              borderWidth: 2
+            }
+          },
+          scales: {
+            r: {
+              beginAtZero: true,
+              max: 100,
+              ticks: {
+                stepSize: 10
+              },
+              grid: {
+                circular: true
+              },
+              angleLines: {
+                color: '#ccc'
+              },
+              pointLabels: {
+                font: {
+                  size: 12
+                }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'top'
+            },
+          }
+        }
+      });
+
 
       new Chart(piCtx, {
         type: 'bar',
