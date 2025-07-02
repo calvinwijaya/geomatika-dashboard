@@ -1,0 +1,203 @@
+.logo-container {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.logo-container img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e0e0e0;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  width: 220px;
+  background: #1565c0;
+  padding: 20px;
+  color: white;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.sidebar button {
+  display: block;
+  margin-bottom: 12px;
+  width: 100%;
+  padding: 12px;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.sidebar button:hover {
+  background: #003c8f;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.course-block {
+  margin-bottom: 25px;
+}
+
+.course-item, .student-item {
+  display: grid;
+  grid-template-columns: 40px 100px 1fr 100px 100px;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 10px;
+}
+
+.student-item {
+  grid-template-columns: 40px 350px 200px 80px;
+}
+
+.course-link a {
+  text-decoration: none;
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.student-filters {
+  margin-bottom: 10px;
+}
+
+.student-filters button {
+  margin-right: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  background: #1976d2;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.student-filters button:hover {
+  background: #0d47a1;
+}
+
+p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.label {
+  font-weight: bold;
+  color: #444;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.dropdown-content button {
+  background: #1976d2;
+  margin: 2px 0;
+  font-size: 14px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background: #0d47a1;
+}
+
+.portfolio-block {
+  margin-bottom: 24px;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.portfolio-year {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  
+  color: #1565c0;
+}
+
+.portfolio-card {
+  display: grid;
+  grid-template-columns: 40px 200px 1fr 140px;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.portfolio-card div {
+  font-size: 15px;
+}
+
+.portfolio-card button {
+  padding: 6px 12px;
+  background-color: #1976d2;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.portfolio-card button:hover {
+  background-color: #0d47a1;
+}
+
+.year-buttons {
+  margin-bottom: 10px;
+}
+
+.year-buttons button {
+  margin-right: 8px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.year-buttons button:hover {
+  background-color: #0d47a1;
+}
