@@ -5,7 +5,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="layout">
+  <!-- Password Gate -->
+  <div id="password-screen" class="password-screen">
+    <div class="password-box">
+      <h2>Masukkan Password</h2>
+      <input type="password" id="password-input" placeholder="Password" />
+      <button onclick="checkPassword()">Masuk</button>
+      <p id="error-message" style="color: red;"></p>
+    </div>
+  </div>
+
+  <!-- Dashboard Layout (Hidden by default) -->
+  <div id="dashboard" class="layout" style="display: none;">
     <div class="sidebar">
         <div class="logo-container">
           <img src="assets/logo.png" alt="Logo" />
@@ -33,5 +44,20 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="main.js"></script>
+  <script>
+  const CORRECT_PASSWORD = "satuhati"; // Change this to your actual password
+
+  function checkPassword() {
+    const input = document.getElementById("password-input").value;
+    const error = document.getElementById("error-message");
+
+    if (input === CORRECT_PASSWORD) {
+      document.getElementById("password-screen").style.display = "none";
+      document.getElementById("dashboard").style.display = "flex";
+    } else {
+      error.textContent = "Password salah. Coba lagi.";
+    }
+  }
+</script>
 </body>
 </html>
