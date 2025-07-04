@@ -297,6 +297,13 @@ content.innerHTML = `
         style="border: none;">
       </iframe>
     </div>
+
+    <p style="margin-top: 20px;">
+      Untuk laporan portofolio program studi dapat diunduh pada link berikut: 
+      <a href="https://ugm.id/PortofolioMagisterProdi" target="_blank" style="color: #1565c0; font-weight: 500;">
+        ugm.id/PortofolioMagisterProdi
+      </a>
+    </p>
   `;
 }
 
@@ -325,7 +332,16 @@ async function PortofolioMK() {
     grouped[entry.Tahun].push(entry);
   });
 
-  content.innerHTML = '<h2>Portofolio Mata Kuliah</h2>';
+  content.innerHTML = `
+    <h2>Portofolio Mata Kuliah</h2>
+    <p>
+      Portofolio mata kuliah program studi dapat diunduh pada link berikut: 
+      <a href="https://ugm.id/PortofolioMagisterMatkul" target="_blank" style="color: #1565c0; font-weight: 500;">
+        ugm.id/PortofolioMagisterMatkul
+      </a>
+    </p>
+  `;
+
   for (const year in grouped) {
     content.innerHTML += `<div class="portfolio-block">
       <div class="portfolio-year">${year}</div>`;
@@ -446,7 +462,16 @@ async function PortofolioMahasiswa() {
     grouped[entry.Tahun].push(entry);
   });
 
-  content.innerHTML = '<h2>Portofolio Mahasiswa</h2>';
+  content.innerHTML = `
+    <h2>Portofolio Mahasiswa</h2>
+    <p>
+      Portofolio mahasiswa dapat diunduh pada link berikut: 
+      <a href="https://ugm.id/PortofolioMagisterMahasiswa" target="_blank" style="color: #1565c0; font-weight: 500;">
+        ugm.id/PortofolioMagisterMahasiswa
+      </a>
+    </p>
+  `;
+
   for (const year in grouped) {
     content.innerHTML += `<div class="portfolio-block">
       <div class="portfolio-year">${year}</div>`;
